@@ -1,9 +1,9 @@
 ### IntelliJ IDEA ###
-*
-!**/.git/**
-!**/.gitignore
-!**/java_5_abstract_sereg/**
-!**/java_5_hf_gyak_collection_of_books/**
+
+#exclude everything except the choosen project directories
+/*
+!/java_5_abstract_sereg/*
+!/java_5_hf_gyak_collection_of_books/*
 **/src/**/out
 
 ### Eclipse ###
