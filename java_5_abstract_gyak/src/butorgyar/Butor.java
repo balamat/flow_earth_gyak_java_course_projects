@@ -12,18 +12,17 @@ public class Butor {
         this.ButorElements = new Butorlap[100];
     }
 
-
-    public Butor lapHozzaad(Butor butor, Butorlap butorlap) {       //mihez mit
-        butor.ButorElements[butor.numberOfElements] = butorlap;
-        butor.numberOfElements++;
-        return butor;
+    public Butor lapHozzaad(Butorlap butorlap) {
+        //add the butorlap object as a parameter to the chosen butor object
+        this.ButorElements[this.numberOfElements] = butorlap;
+        this.numberOfElements++;
+        return this;
     }
 
-    public double arSzamol(Butor butor) {
+    public double arSzamol() {
         double sum = 0;
-        for (int i = 0; i < numberOfElements; i++) {
-//            sum+=butorlap.arSzamol(butorlap);
-            sum += butor.ButorElements[i].arSzamol(butor.ButorElements[i]);
+        for (int i = 0; i < this.numberOfElements; i++) {
+            sum += this.ButorElements[i].arSzamol();
         }
         return sum;     //a bútor ára
     }
@@ -33,9 +32,9 @@ public class Butor {
         String elements = "";
         int i = 0;
         while (ButorElements[i] != null) {
-            elements += "\n" + (i+1) + ". " +ButorElements[i] + " " + ButorElements[i].arSzamol(ButorElements[i]) + " Ft";
+            elements += "\n" + (i + 1) + ". " + ButorElements[i] + " " + ButorElements[i].arSzamol() + " Ft";
             i++;
         }
-        return "Butor - lapok: " + (numberOfElements) + ", ár " + arSzamol(this) + " Ft" + elements;
+        return "Butor - lapok: " + (numberOfElements) + ", ár " + arSzamol() + " Ft" + elements;
     }
 }
