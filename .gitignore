@@ -1,9 +1,10 @@
 ### IntelliJ IDEA ###
 *
-!**/.git
+!**/.git/**
 !**/.gitignore
-!**/java_5_abstract_sereg
-!**/java_5_hf_gyak_collection_of_books
+!**/java_5_abstract_sereg/**
+!**/java_5_hf_gyak_collection_of_books/**
+**/src/**/out
 
 ### Eclipse ###
 .apt_generated
